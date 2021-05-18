@@ -1,3 +1,4 @@
+// api url link
 const url = 'https://usman-recipes.herokuapp.com/api/products/';
 
 let prod;
@@ -73,7 +74,7 @@ function updateProduct(id, product, onSuccess) {
 }
 
 function addRow(product) {
-    var row = $('<div>', {'id': product._id, 'class': 'product p-4 col-12 col-md-4 prod-div'});
+    var row = $('<div>', {'id': product._id, 'class': 'product p-4 col-12 col-md-12 prod-div'});
     row.html(`
                 <div class="bg-light rounded-lg overflow-hidden shadow-sm p-4">
                     <div class="d-flex align-items-center justify-content-between">
@@ -98,8 +99,9 @@ function addRow(product) {
                     <p>${product.department}</p>
                     <p>${product.description}</p>
                     <div class="d-flex justify-content-between">
-                        <p class="mb-0">${product.color}</p>
-                        <p class="pr-2 mb-0">${product.price}</p>
+                        <p class="mb-0">${product.price}</p>
+                        <p class="pr-2 mb-0">${product.color}</p>
+               
                     </div>
                 </div>
     `);
